@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "engine": {
+      "type": "enumeration",
+      "enum": [
+        "бензиновый",
+        "дизельный",
+        "электрический"
+      ],
+      "required": true
+    },
+    "powerReserve": {
+      "type": "float"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "yearIssue": {
+      "type": "integer",
+      "required": true,
+      "min": 1900,
+      "default": 1900
+    },
+    "creator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "cars"
+    },
+    "transmission": {
+      "type": "enumeration",
+      "enum": [
+        "автоматическая",
+        "ручная",
+        "роботизированная"
+      ]
+    }
+  }
+}
