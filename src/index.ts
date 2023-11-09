@@ -1,6 +1,3 @@
-import bcrypt from 'bcrypt';
-
-
 export default {
   /**
    * An asynchronous register function that runs before
