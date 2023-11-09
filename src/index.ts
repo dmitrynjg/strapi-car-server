@@ -17,9 +17,5 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {
-    bcrypt.hash('123456Di', 12).then((res) => {
-      console.log(res)
-    });
-  },
+  bootstrap(/*{ strapi }*/) {},
 };
